@@ -3,3 +3,7 @@
 /elpa-*
 /transient
 *~
+
+# projectile
+.uptimes.el
+projectile-bookmarks.eld
