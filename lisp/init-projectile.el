@@ -29,5 +29,6 @@
 ;; use M-r for finding all occurrences (similar to anaconda-mode). C-c p s s is too clunky.
 (global-set-key (kbd "M-r") 'projectile-ag)
 
+
 (provide 'init-projectile)
 ;;; init-projectile.el ends here
