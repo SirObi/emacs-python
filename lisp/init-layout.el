@@ -1,6 +1,7 @@
 ;; define list of packages to install
 (defvar emacsLayoutPackages
-  '(atom-one-dark-theme))
+  '(atom-one-dark-theme
+    vertico))
 
 ;; install all packages in list
 (mapc #'(lambda (package)
@@ -14,6 +15,7 @@
   (tool-bar-mode -1))                         ;; hide toolbar
 (menu-bar-mode -1)                            ;; hide menu
 (setq inhibit-startup-message t)              ;; hide the startup message
+(vertico-mode)                                ;; show completion suggestions in a vertical buffer
 
 (set-face-attribute 'default nil :height 120) ;; Set font size to 12
                                               ;; Uncomment the line below to try an Asian-style font
