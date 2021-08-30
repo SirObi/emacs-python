@@ -3,8 +3,10 @@
 ;;; Code:
 
 (when (maybe-require-package 'flycheck)
+  (add-hook 'after-init-hook 'poetry-tracking-mode)
   (add-hook 'after-init-hook 'global-flycheck-mode)
-  (setq flycheck-display-errors-function #'flycheck-display-error-messages-unless-error-list)
+
+  (setq flycheck-display-errors-function 'flycheck-display-error-messages-unless-error-list)
 
   ;; Enable flake8 and mypy to use pyproject.toml as their config file
   (setq flycheck-python-mypy-config '("mypy.ini" "setup.cfg" "pyproject.toml"))
