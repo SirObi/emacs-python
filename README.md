@@ -10,5 +10,10 @@ Launch Emacs and run:
 ## Running  
 It's best to `cd` to the folder you want to open with Emacs and then 
 
+### Linux  
+`emacs .`  
+
 ### MacOS
-run `open -a Emacs.app .`
+`open -a Emacs.app .`
+
+You can alias either to `e .` in you shell config file (like `.zshrc` or `.bashrc`).  
