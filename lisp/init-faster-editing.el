@@ -10,10 +10,14 @@
       (package-install package)))
       fasterEditingPackages)
 
-;; Automatically update buffer if file changes on disk
+;; Automatically update buffer if file changes on disk or new file added
 (add-hook 'after-init-hook 'global-auto-revert-mode)
-(setq global-auto-revert-non-file-buffers t
+(setq global-auto-revert-non-file-buffers t ;; updates dired buffers
       auto-revert-verbose nil)
+
+;; Autosave in the visited file
+(add-hook 'after-init-hook 'auto-save-visited-mode)
+(setq auto-save-visited-interval 2)
 
 ;; Complete parens automatically
 (when (fboundp 'electric-pair-mode)
