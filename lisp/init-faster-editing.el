@@ -19,6 +19,14 @@
 (add-hook 'after-init-hook 'auto-save-visited-mode)
 (setq auto-save-visited-interval 2)
 
+;; Cache names of files you visited
+;; This allows you to get the best out of C-x b and save you a ton of key-presses.
+(setq desktop-path (list user-emacs-directory)  ;; saves a list of open files in ~/.emacs.d/.emacs.desktop
+      desktop-auto-save-timeout 600)
+(desktop-save-mode 1)
+
+(provide 'init-sessions)
+
 ;; Complete parens automatically
 (when (fboundp 'electric-pair-mode)
   (add-hook 'after-init-hook 'electric-pair-mode))
